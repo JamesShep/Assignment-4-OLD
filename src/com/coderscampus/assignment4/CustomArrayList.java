@@ -8,11 +8,9 @@ public class CustomArrayList<T> implements CustomList<T> {
     public boolean add(T item) {
         if (arraySize >= items.length) {
             items = increaseArraySize();
-            return false; // Is this needed? During testing I feel as if it did nothing
-        } else {
-            items[arraySize++] = item;
-            return true;
         }
+        items[arraySize++] = item;
+        return true;
     }
 
     @Override
